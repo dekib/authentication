@@ -7,7 +7,7 @@ Project is created with:
 * Typescript
 * DynamoDB
 * Express
-It is recommended to use Helmet package for safety reasons 
+(It is recommended to use Helmet package for safety reasons)
 
 ## Setup
 To run this project,
