@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "c4c4a8a1-13ed-4ae8-b8cc-7aee1803038c",
+		"name": "Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"ts3@aol.com\",\n    \"password\":\"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3001/api/v1/users/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"tst@aol.com\",\n    \"password\":\"1234qwer\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3001/api/v1/users/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRzdDJAYW9sLmNvbSIsImlhdCI6MTYxODk1NDA1NiwiZXhwIjoxNjE5MDQwNDU2fQ.ykwEFRQseEQYXN4howMh740L4jGuchP3C3Q3Hg64DqE"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"tst2@aol.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3001/api/v1/users/delete"
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRzQGFvbC5jb20iLCJpYXQiOjE2MTg5NTg0NjcsImV4cCI6MTYxOTA0NDg2N30.B8jqmnLVtCBFCdndH-Ja58fuUMjxWpJniSKB04ul_7c"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"ts@aol.com\",\n    \"oldPassword\":\"12345678\",\n    \"newPassword\":\"87654321\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3001/api/v1/users/change_password"
+			},
+			"response": []
+		}
+	]
+}
